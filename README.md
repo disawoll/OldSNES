@@ -15,7 +15,7 @@ INSTRUCTIONS:
 - Create a folder for each game on the input folder (Earthbound, for example).
 - Put your SNES rom on this folder.
 - Put an icon image on this folder and rename it icon.png or icon.jpg. This can be whatever image you want for the home menu icon (a screenshot, for example).
-- Run make_snes9x.bat.
+- Run make.bat.
 - Type in the game's title, description (optional), publisher, product code (SNS-MW-USA, for example), and unique id (whatever you want from 00000 to fffff).
 - Install the generated CIA file. (it's in OldSNES/cia/ folder)
 - Enjoy.
@@ -38,15 +38,16 @@ CUSTOM BANNER (OPTIONAL):
 
 UPDATING EXISTING CIAS:
 - Put all of yours cias inside the cia folder (keep a backup of them just in case something goes wrong).
-- Run update_snes9x.bat.
+- Run update.bat.
 - OPTIONAL: If you want to add or replace files, put them into the folder you created for the game, then confirm when prompted to "include or update any extra files".
 - OPTIONAL: If you want to delete existing files, go to the romfs folder and delete whichever file(s) you want. DO NOT DELETE ROM.SMC.
+
 
 TRANSFERRING PRE-EXISTING SAVE FILES:
 - Run the Virtual Console version first, then replace its savefile with your current one. The VC savefile is located on at the "snes" folder on the root of the SD card. (The same applies to savestates and the config. file)
 
 
-Credits:
+CREDITS:
 - StapleButter and DiscostewSM for blargSNES.
 - bubble2k16 for Snes9x 3DS.
 - Asia81 for the SNES VC banner template.
