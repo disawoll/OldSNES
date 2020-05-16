@@ -34,3 +34,5 @@ Credits:
 - StapleButter and DiscostewSM for blargSNES.
 - bubble2k16 for Snes9x 3DS.
 - Asia81 for the SNES VC banner template.
+- Qyriad for banner creation bat
+- moosan82 for snes9x 1.30 update
