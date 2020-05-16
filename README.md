@@ -42,6 +42,9 @@ UPDATING EXISTING CIAS:
 - OPTIONAL: If you want to add or replace files, put them into the folder you created for the game, then confirm when prompted to "include or update any extra files".
 - OPTIONAL: If you want to delete existing files, go to the romfs folder and delete whichever file(s) you want. DO NOT DELETE ROM.SMC.
 
+TRANSFERRING PRE-EXISTING SAVE FILES:
+- Run the Virtual Console version first, then replace its savefile with your current one. The VC savefile is located on at the "snes" folder on the root of the SD card. (The same applies to savestates and the config. file)
+
 
 Credits:
 - StapleButter and DiscostewSM for blargSNES.
