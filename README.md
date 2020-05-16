@@ -1,5 +1,9 @@
 # OldSNES: SNES VC for Old 3DS users
 
+WHAT'S DIFFERENT FROM THE ORIGINAL?
+- Updated to snes9x_3ds v1.30 by moosan82
+- Updated to use Qyriad's banner creating procedure
+
 INSTRUCTIONS:
 - Create a folder for each game on the input folder (Earthbound, for example).
 - Put your SNES rom on this folder.
