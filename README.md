@@ -1,8 +1,15 @@
 # OldSNES: SNES VC for Old 3DS users
 
 WHAT'S DIFFERENT FROM THE ORIGINAL?
-- Updated to snes9x_3ds v1.30 by moosan82
-- Updated to use Qyriad's banner creating procedure
+- Updated to snes9x_3ds v1.30 by moosan82.
+- Updated to use Qyriad's banner creating procedure.
+- Removed support for blargSNES.
+
+
+PRE-INSTRUCTIONS (INSTALLING SNES9X):
+- Download snes9x_3ds from: https://github.com/bubble2k16/snes9x_3ds/releases
+- Follow the instructions on: https://github.com/bubble2k16/snes9x_3ds/blob/master/readme.md
+
 
 INSTRUCTIONS:
 - Create a folder for each game on the input folder (Earthbound, for example).
@@ -15,6 +22,7 @@ INSTRUCTIONS:
 
 Note: If you don't provide an icon image, banner.png/banner.jpg will be used for the icon instead.
 
+
 CUSTOM BANNER (OPTIONAL):
 - Download "Ultimate SNES Forwarder Maker for 3DS" from https://gbatemp.net/threads/release-ultimate-snes-forwarder-maker-for-3ds.460895/
 - Run "Ultimate SNES Forwarder Maker for 3DS.exe"
@@ -26,6 +34,7 @@ CUSTOM BANNER (OPTIONAL):
 - Enter banner text (1) and (2) accordingly to your game. Font used is not the same as the original vc titles so we're going to adjust that. Go to "OldSNES/input/" you'll see "SCE-PS3-RD-R-LATIN.TTF" click on it to install the font. Then go back to the app and click on "Select font (1) & (2)" and change font used to what you installed just now.
 - Once you're all done, click on "Export banner.bin" button on the bottom then set the export location to OldSNES/input/"GameName" and name set the name as "banner".
 - You can close the program now, we just used this program to create the banners for our vc.
+
 
 UPDATING EXISTING CIAS:
 - Put all of yours cias inside the cia folder (keep a backup of them just in case something goes wrong).
