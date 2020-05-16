@@ -4,39 +4,28 @@ INSTRUCTIONS:
 - Create a folder for each game on the input folder (Earthbound, for example).
 - Put your SNES rom on this folder.
 - Put an icon image on this folder and rename it icon.png or icon.jpg. This can be whatever image you want for the home menu icon (a screenshot, for example).
-- Run make_blarg.bat for blargSNES and make_snes9x.bat for Snes9x.
+- Run make_snes9x.bat.
 - Type in the game's title, description (optional), publisher, product code (SNS-MW-USA, for example), and unique id (whatever you want from 00000 to fffff).
-- Install the generated CIA file.
+- Install the generated CIA file. (it's in OldSNES/cia/ folder)
 - Enjoy.
 
 Note: If you don't provide an icon image, banner.png/banner.jpg will be used for the icon instead.
 
-
 CUSTOM BANNER (OPTIONAL):
-- Before you begin make sure your screen resolution is 1366x768, otherwise the automatic banner generation will not work.
-- Put a screenshot of the game on the folder you created for the game, and rename it banner.png or banner.jpg.
-- OPTIONAL: Put a box art or cartridge label image of the game on the folder you created for the game, and rename it label.png or label.jpg.
-- Run banner.bat.
-- Type in the game's title and release year.
-- OPTIONAL: Type in the virtual console's title (the title that will be appear on the banner).
-- OPTIONAL: Set the banner text's font size, number of lines, letter spacing and word spacing. Leave it blank to use default values.
-- Press Enter then DO NOT touch anything, just wait until it's done.
-
-CUSTOM BORDERS AND CONFIG OVERRIDE (OPTIONAL, BLARGSNES ONLY):
-- Put your border on the folder you created for the game. It can be named whatever you want, as long as it is a .bmp image file.
-- Go to config folder and select a config template.
-  - Mode7: activate Mode 7 filtering.
-  - Normal: normal template.
-  - Borders: sets scaling to 1:1 so you can use a custom border.
-  - Fullscreen: sets scaling to fullscreen.
-- Copy the config template to the folder you created for the game.
-
-Note: You need to use the "borders" config template if using custom borders.
-
+- Download "Ultimate SNES Forwarder Maker for 3DS" from https://gbatemp.net/threads/release-ultimate-snes-forwarder-maker-for-3ds.460895/
+- Run "Ultimate SNES Forwarder Maker for 3DS.exe"
+- Open your rom file (.sfc or .smc)
+- Enter Long name, Short name & Game publisher then click "Load icon image" and choose an image. (This can be whatever image you want for the home menu icon)
+- Click on "Export icon.bin" button on the bottom then set the export location to OldSNES/input/"GameName" and name set the name as "icon".
+- Click on "Next step (3d banner)" to advance to next part.
+- Click on "Load inner image" and choose an image (a box art or cartridge label image of the game) then choose a style. 
+- Enter banner text (1) and (2) accordingly to your game. Font used is not the same as the original vc titles so we're going to adjust that. Go to "OldSNES/input/" you'll see "SCE-PS3-RD-R-LATIN.TTF" click on it to install the font. Then go back to the app and click on "Select font (1) & (2)" and change font used to what you installed just now.
+- Once you're all done, click on "Export banner.bin" button on the bottom then set the export location to OldSNES/input/"GameName" and name set the name as "banner".
+- You can close the program now, we just used this program to create the banners for our vc.
 
 UPDATING EXISTING CIAS:
 - Put all of yours cias inside the cia folder (keep a backup of them just in case something goes wrong).
-- Run update_blarg.bat for blargSNES and update_snes9x.bat for Snes9x.
+- Run update_snes9x.bat.
 - OPTIONAL: If you want to add or replace files, put them into the folder you created for the game, then confirm when prompted to "include or update any extra files".
 - OPTIONAL: If you want to delete existing files, go to the romfs folder and delete whichever file(s) you want. DO NOT DELETE ROM.SMC.
 
