@@ -2,7 +2,7 @@
 :begin
 cls
 echo OldSNES -- SNES VC for Old 3DS users
-echo Currently using: Snes9x
+echo Currently using: Snes9x for 3DS
 set /p "title=Game Title: "
 if not exist "input\%title%\*.smc" if not exist "input\%title%\*.sfc" (
     echo ERROR: Missing rom file.
@@ -23,8 +23,7 @@ if exist "input\%title%\*.smc" (
 ) else (
     copy /b "input\%title%\*.sfc" romfs\rom.smc >NUL 2>NUL
 )
-if exist "input\%title%\*.bmp" copy /b "input\%title%\*.bmp" romfs\blargSnesBorder.bmp >NUL 2>NUL
-if exist "input\%title%\*.ini" copy /b "input\%title%\*.ini" romfs\blargSnes.ini >NUL 2>NUL
+if exist "input\%title%\*.cfg" copy /b "input\%title%\*.cfg" romfs\rom.cfg >NUL 2>NUL
 if exist "input\%title%\icon.png" ( set file=icon.png
 ) else if exist "input\%title%\icon.bin" ( set file=icon.bin
 ) else if exist "input\%title%\icon.jpg" ( set file=icon.jpg
@@ -52,12 +51,14 @@ if not "%useBin%"=="T" (
 
 (echo %title%)>romfs\rom.txt
 if not exist cia mkdir cia
+
 if "%useBin%"=="T" (
-	tools\makerom -f cia -target t -rsf "tools\custom.rsf" -o "cia\%title%.cia" -exefslogo -icon "input\%title%\icon.bin" -banner "input\%title%\banner.bin" -elf "tools\blargSnes.elf" -DAPP_TITLE="%title%" -DAPP_PRODUCT_CODE="%serial%" -DAPP_UNIQUE_ID="0x%id%" -DAPP_ROMFS="romfs"
+	tools\makerom -f cia -target t -rsf "tools\custom.rsf" -o "cia\%title%.cia" -exefslogo -icon "input\%title%\icon.bin" -banner "input\%title%\banner.bin" -elf "tools\snes9x_3ds.elf" -DAPP_TITLE="%title%" -DAPP_PRODUCT_CODE="%serial%" -DAPP_UNIQUE_ID="0x%id%" -DAPP_ROMFS="romfs"
 ) else (	
 	tools\makerom -f cia -target t -rsf "tools\custom.rsf" -o "cia\%title%.cia" -exefslogo -icon "icon.bin" -banner "output\%title%\banner.bin" -elf "tools\snes9x_3ds.elf" -DAPP_TITLE="%title%" -DAPP_PRODUCT_CODE="%serial%" -DAPP_UNIQUE_ID="0x%id%" -DAPP_ROMFS="romfs" >NUL 2>NUL
 	del icon.bin
 )
+
 del /f /q romfs
 if exist banner\backup (
     copy /b banner\backup banner >NUL 2>NUL
